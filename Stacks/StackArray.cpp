@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-#define MAX_SIZE 101
+#define MAX_SIZE 100
 
 int A[MAX_SIZE];
 int top=-1;
