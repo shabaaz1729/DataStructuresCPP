@@ -1,2 +1,2 @@
 # DataStructuresCPP
-Implementation of all Data Structures in C++
+Implementation of Data Structures in C++
