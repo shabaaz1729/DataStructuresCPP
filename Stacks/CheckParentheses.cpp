@@ -40,7 +40,9 @@ bool checkparentheses(string str)
 
 int main()
 {
-  string s="{()()}";
+  string s;
+  cin>>s;
+  
   if(checkparentheses(s))
     cout<<"balanced string\n";
   else
