@@ -55,10 +55,10 @@ BstNode* getSuccesor(BstNode* root,int data)
 			if(current->data < ancestor->data)
 			{
 				successor = ancestor;
-				ancestor = ancestor->left;
+				ancestor = ancestor->lc;
 			}
 			else
-				ancestor = ancestor->right
+				ancestor = ancestor->rc;
 		}
 
 		return successor;
