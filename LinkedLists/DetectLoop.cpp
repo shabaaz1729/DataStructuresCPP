@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <unordered_set>
 using namespace std;
 
 struct Node
@@ -33,6 +33,8 @@ void createlist(int d)
 
 }
 
+// version 1
+
 bool detectLoop(Node* head)
 {
 	Node *temp1 = head, *temp2 = head;
@@ -46,6 +48,27 @@ bool detectLoop(Node* head)
 	}
 	return false;
 
+}
+
+// version 2
+
+bool detectLoop(Node* head)
+{
+	Node* temp = head;
+	unordered_set<Node*> s;
+
+	while(temp->link != NULL)
+	{
+		if(s.find(temp) == s.end())
+		{
+			s.insert(temp);
+			temp = temp->link;
+		}
+		else
+			return true;
+	}
+
+	return false;
 }
 
 int main()
